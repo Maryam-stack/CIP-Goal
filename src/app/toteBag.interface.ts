@@ -1,4 +1,4 @@
-export interface Hero{
+export interface ToteBag{
     id: Number;
     name: String;
 }

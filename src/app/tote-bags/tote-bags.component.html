@@ -1,0 +1,11 @@
+<h2>Best Seller</h2>
+<div>
+    <ul class="heroes">
+        <li *ngFor="let toteBag of toteBags">
+          <a routerLink="/detail/{{toteBag.id}}">
+            <span class="badge">{{toteBag.id}}</span> {{toteBag.name}}
+          </a>
+        </li>
+      </ul>
+</div>
+<!--<app-hero-detail [hero]="selectedHero"></app-hero-detail>-->

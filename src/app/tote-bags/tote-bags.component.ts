@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ToteBag } from '../toteBag.interface';
+import { TOTEBAGS } from '../toteBag.const';
 import { ToteBagsService } from '../toteBags.service';
+import { MessageService } from '../message.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: [ './dashboard.component.css' ]
+  selector: 'app-tote-bags',
+  templateUrl: './tote-bags.component.html',
+  styleUrls: ['./tote-bags.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class ToteBagsComponent implements OnInit {
   toteBags: ToteBag[] = [];
 
   constructor(private toteBagsService: ToteBagsService) { }
@@ -18,6 +20,6 @@ export class DashboardComponent implements OnInit {
 
   getToteBags(): void {
     this.toteBagsService.getToteBags()
-      .subscribe(toteBags => this.toteBags = toteBags.slice(1, 5));
+    .subscribe(toteBags => this.toteBags = toteBags);
   }
 }

@@ -1,0 +1,10 @@
+
+<div *ngIf="toteBag">
+  <h2>{{toteBag.name}} Details</h2>
+  <div><span>id: </span>{{toteBag.id}}</div>
+  <div>
+    <label>Tote Bag name: </label>
+    <input id="tote-Bag-name" [(ngModel)]="toteBag.name" placeholder="name">
+  </div>
+  <button type="button" (click)="goBack()">go back</button>
+</div>
